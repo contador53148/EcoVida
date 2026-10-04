@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="EcoVida - Soluciones ambientales para un futuro sostenible">
+
+    <title>EcoVida | Soluciones Ambientales</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">🌱</span>
+            <span>EcoVida</span>
+        </div>
+
+        <nav id="navMenu">
+
+            <a href="#inicio">Inicio</a>
+
+            <a href="#soluciones">
+                Soluciones
+            </a>
+
+            <a href="#calculadora">
+                Calculadora
+            </a>
+
+            <a href="#nosotros">
+                Nosotros
+            </a>
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
+        </nav>
+
+        <button
+            class="theme-button"
+            onclick="cambiarTema()"
+            title="Cambiar tema">
+
+            🌙
+
+        </button>
+
+        <button
+            class="menu-button"
+            onclick="mostrarMenu()">
+
+            ☰
+
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                CUIDEMOS NUESTRO PLANETA
+            </p>
+
+            <h1>
+                Construyamos un
+                <span>futuro sostenible</span>
+            </h1>
+
+            <p>
+                Descubre herramientas y soluciones para reducir
+                nuestro impacto ambiental y crear hábitos más
+                responsables.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#soluciones"
+                   class="btn btn-primary">
+
+                    Explorar soluciones
+
+                </a>
+
+                <a href="#calculadora"
+                   class="btn btn-secondary">
+
+                    Calcular mi impacto
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-illustration">
+
+            <div class="planet">
+
+                🌎
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ESTADÍSTICAS ================= -->
+
+    <section class="stats">
+
+        <div class="stat">
+
+            <strong>70%</strong>
+
+            <span>
+                del planeta está cubierto por agua
+            </span>
+
+        </div>
+
+        <div class="stat">
+
+            <strong>3R</strong>
+
+            <span>
+                Reducir, reutilizar y reciclar
+            </span>
+
+        </div>
+
+        <div class="stat">
+
+            <strong>1</strong>
+
+            <span>
+                planeta tenemos para cuidar
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SOLUCIONES ================= -->
+
+    <section id="soluciones" class="section">
+
+        <div class="section-title">
+
+            <span>¿QUÉ PODEMOS HACER?</span>
+
+            <h2>
+                Soluciones ambientales
+            </h2>
+
+            <p>
+                Pequeñas acciones pueden generar grandes
+                cambios en nuestro entorno.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <article class="card">
+
+                <div class="card-icon">
+                    ♻️
+                </div>
+
+                <h3>
+                    Gestión de residuos
+                </h3>
+
+                <p>
+                    Aprende a separar correctamente los residuos
+                    y reducir la cantidad de basura que generamos.
+                </p>
+
+                <button onclick="mostrarConsejo('residuos')">
+                    Ver recomendación →
+                </button>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icon">
+                    💧
+                </div>
+
+                <h3>
+                    Ahorro de agua
+                </h3>
+
+                <p>
+                    Implementa hábitos sencillos para disminuir
+                    el consumo de agua en tu hogar.
+                </p>
+
+                <button onclick="mostrarConsejo('agua')">
+                    Ver recomendación →
+                </button>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icon">
+                    🌳
+                </div>
+
+                <h3>
+                    Protección ambiental
+                </h3>
+
+                <p>
+                    Conoce acciones para proteger los ecosistemas
+                    y conservar nuestros recursos naturales.
+                </p>
+
+                <button onclick="mostrarConsejo('bosques')">
+                    Ver recomendación →
+                </button>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Energía responsable
+                </h3>
+
+                <p>
+                    Reduce el consumo energético utilizando
+                    responsablemente los recursos disponibles.
+                </p>
+
+                <button onclick="mostrarConsejo('energia')">
+                    Ver recomendación →
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CALCULADORA ================= -->
+
+    <section id="calculadora"
+             class="calculator-section">
+
+        <div class="calculator">
+
+            <div class="section-title">
+
+                <span>HERRAMIENTA AMBIENTAL</span>
+
+                <h2>
+                    Calcula tu impacto
+                </h2>
+
+                <p>
+                    Ingresa algunos datos de tu consumo semanal
+                    y obtén una estimación.
+                </p>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>
+                        Bolsas plásticas utilizadas
+                    </label>
+
+                    <input
+                        type="number"
+                        id="bolsas"
+                        min="0"
+                        value="5">
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Botellas plásticas
+                    </label>
+
+                    <input
+                        type="number"
+                        id="botellas"
+                        min="0"
+                        value="5">
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Duchas por semana
+                    </label>
+
+                    <input
+                        type="number"
+                        id="duchas"
+                        min="0"
+                        value="7">
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Horas de vehículo
+                    </label>
+
+                    <input
+                        type="number"
+                        id="vehiculo"
+                        min="0"
+                        value="2">
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="btn btn-primary calculate-button"
+                onclick="calcularImpacto()">
+
+                🌱 Calcular impacto
+
+            </button>
+
+
+            <div id="resultado"
+                 class="result">
+
+                <h3>
+                    Tu resultado aparecerá aquí
+                </h3>
+
+                <p>
+                    Completa los datos y presiona calcular.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NOSOTROS ================= -->
+
+    <section id="nosotros"
+             class="section about">
+
+        <div class="about-image">
+
+            🌎
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span>
+                SOBRE ECOVIDA
+            </span>
+
+            <h2>
+                Tecnología al servicio del planeta
+            </h2>
+
+            <p>
+                EcoVida es una iniciativa digital que busca
+                promover la educación ambiental mediante
+                herramientas tecnológicas sencillas,
+                interactivas y accesibles.
+            </p>
+
+            <p>
+                Nuestro objetivo es facilitar la toma de
+                decisiones responsables relacionadas con
+                residuos, agua, energía y conservación.
+            </p>
+
+            <div class="features">
+
+                <div>
+                    ✓ Educación ambiental
+                </div>
+
+                <div>
+                    ✓ Tecnología sostenible
+                </div>
+
+                <div>
+                    ✓ Participación ciudadana
+                </div>
+
+                <div>
+                    ✓ Cuidado de los recursos
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACTO ================= -->
+
+    <section id="contacto"
+             class="contact-section">
+
+        <div class="section-title">
+
+            <span>CONTÁCTANOS</span>
+
+            <h2>
+                ¿Quieres hacer parte del cambio?
+            </h2>
+
+            <p>
+                Envíanos tus preguntas, ideas o propuestas.
+            </p>
+
+        </div>
+
+
+        <form id="contactForm"
+              class="contact-form">
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Nombre completo"
+                required>
+
+            <input
+                type="email"
+                id="correo"
+                placeholder="Correo electrónico"
+                required>
+
+            <textarea
+                id="mensaje"
+                placeholder="Escribe tu mensaje..."
+                required></textarea>
+
+            <button
+                type="submit"
+                class="btn btn-primary">
+
+                Enviar mensaje
+
+            </button>
+
+        </form>
+
+        <div id="mensajeContacto"></div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🌱 EcoVida
+        </div>
+
+        <p>
+            Tecnología, educación y compromiso ambiental.
+        </p>
+
+        <div class="social">
+
+            <span>🌎</span>
+            <span>♻️</span>
+            <span>🌱</span>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 EcoVida. Proyecto académico ADSO.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
